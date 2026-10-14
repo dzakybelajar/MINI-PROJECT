@@ -24,35 +24,35 @@ public class miniproject {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        int jumlahMahasiswa = 3;
-        Mahasiswa[] daftarMhs = new Mahasiswa[jumlahMahasiswa];
+        int jmlh_mhs = 3;
+        Mahasiswa[] mhs = new Mahasiswa[jmlh_mhs];
 
-        System.out.println("=== INPUT DATA MAHASISWA ===");
+        System.out.println("=== Input Data Mahasiswa ===");
         
-        for (int i = 0; i < jumlahMahasiswa; i++) {
+        for (int i = 0; i < jmlh_mhs; i++) {
             System.out.println("\nMasukkan data mahasiswa ke-" + (i + 1));
             
-            daftarMhs[i] = new Mahasiswa();
+            mhs[i] = new Mahasiswa();
 
             System.out.print("Nama  : ");
-            daftarMhs[i].nama = input.nextLine();
+            mhs[i].nama = input.nextLine();
 
             System.out.print("NIM   : ");
-            daftarMhs[i].nim = input.nextLine();
+            mhs[i].nim = input.nextLine();
 
             System.out.print("Nilai : ");
             String strNilai = input.nextLine();
-            daftarMhs[i].nilai = Double.parseDouble(strNilai);
+            mhs[i].nilai = Double.parseDouble(strNilai);
         }
 
-        System.out.println("\n===================================");
-        System.out.println("      DAFTAR KELULUSAN MAHASISWA     ");
-        System.out.println("===================================");
+        System.out.println("\n-----------------------------------");
+        System.out.println("    Daftar Kelulusan Mahasiswa     ");
+        System.out.println("-----------------------------------");
         
-        for (int i = 0; i < jumlahMahasiswa; i++) {
+        for (int i = 0; i < jmlh_mhs; i++) {
             System.out.println("Mahasiswa ke-" + (i + 1));
-            daftarMhs[i].tampilkanData();
-            daftarMhs[i].cekKelulusan();
+            mhs[i].tampilkanData();
+            mhs[i].cekKelulusan();
         }
         input.close();
     }
